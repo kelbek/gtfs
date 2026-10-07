@@ -1,0 +1,57 @@
+<div>
+  <div ng-if="!c.data.hasFeed" class="gtfs-card gtfs-muted">
+    <i class="fa fa-info-circle" aria-hidden="true"></i>
+    No timetable is published yet.
+  </div>
+
+  <div ng-if="c.data.hasFeed &amp;&amp; !c.data.trip" class="gtfs-card gtfs-muted">
+    Trip not found.
+  </div>
+
+  <div ng-if="c.data.hasFeed &amp;&amp; c.data.trip">
+    <div class="gtfs-hero">
+      <gtfs-route-badge ng-if="c.data.trip.route" route="c.data.trip.route"></gtfs-route-badge>
+      <h1>
+        <span ng-if="c.data.trip.trip_headsign" ng-bind="c.data.trip.trip_headsign"></span>
+        <span ng-if="!c.data.trip.trip_headsign">Trip <span ng-bind="c.data.trip.trip_id"></span></span>
+      </h1>
+    </div>
+
+    <div class="gtfs-card">
+      <h2>Accessibility</h2>
+      <p>Wheelchair: <span ng-bind="c.data.trip.wheelchair_text"></span></p>
+      <p>Bikes: <span ng-bind="c.data.trip.bikes_text"></span></p>
+    </div>
+
+    <div class="gtfs-card">
+      <h2>Stops</h2>
+      <table class="table">
+        <caption class="sr-only">Stop sequence for this trip</caption>
+        <thead>
+          <tr>
+            <th scope="col">Stop</th>
+            <th scope="col">Arrival</th>
+            <th scope="col">Departure</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="s in c.data.trip.stops track by $index"
+              ng-class="{'gtfs-muted': s.is_last_stop}">
+            <td>
+              <a ng-href="?id={{c.data.stopPage}}&amp;stop_id={{s.stop_id}}" ng-bind="s.stop_name"></a>
+              <span class="label label-default" ng-if="s.is_last_stop">Last stop</span>
+            </td>
+            <td>
+              {{s.arrival}}
+              <span class="gtfs-nextday" ng-if="s.arrival_next_day">+1 day</span>
+            </td>
+            <td>
+              {{s.departure}}
+              <span class="gtfs-nextday" ng-if="s.departure_next_day">+1 day</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

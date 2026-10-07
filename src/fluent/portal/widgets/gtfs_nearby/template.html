@@ -1,0 +1,41 @@
+<div>
+  <div ng-if="!c.data.hasFeed" class="gtfs-card gtfs-muted">
+    <i class="fa fa-info-circle" aria-hidden="true"></i>
+    No timetable is published yet.
+  </div>
+
+  <div ng-if="c.data.hasFeed" class="gtfs-card">
+    <h2>Stops near me</h2>
+    <button type="button" class="btn btn-primary"
+            ng-click="c.locate()" ng-disabled="c.geoState === 'locating'">
+      <i class="fa fa-location-arrow" aria-hidden="true"></i>
+      <span ng-if="c.geoState !== 'locating'">Near me</span>
+      <span ng-if="c.geoState === 'locating'">Locating&hellip;</span>
+    </button>
+
+    <p class="gtfs-muted">
+      Your location is used only for this search to find nearby stops. It is not stored.
+    </p>
+
+    <div class="alert alert-warning" role="alert" ng-if="c.geoState === 'denied'">
+      Location access was denied. Allow location access, or use the search instead.
+    </div>
+    <div class="alert alert-warning" role="alert" ng-if="c.geoState === 'unavailable'">
+      Location is unavailable on this device or browser. Please use the search instead.
+    </div>
+
+    <div aria-live="polite">
+      <ul class="gtfs-result-list" ng-if="c.data.stops.length">
+        <li ng-repeat="s in c.data.stops track by s.stop_id">
+          <a ng-href="?id={{c.data.stopPage}}&amp;stop_id={{s.stop_id}}">
+            <span ng-bind="s.stop_name"></span>
+          </a>
+          <span class="gtfs-muted">&middot; {{s.distance_m}} m away</span>
+        </li>
+      </ul>
+      <p class="gtfs-muted" ng-if="c.geoState === 'done' &amp;&amp; c.data.searched &amp;&amp; !c.data.stops.length">
+        No stops found within 1&nbsp;km of your location.
+      </p>
+    </div>
+  </div>
+</div>

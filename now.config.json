@@ -1,0 +1,6 @@
+{
+  "scope": "x_msag_gtfs_schedu",
+  "scopeId": "1499e3d1c3bf875092fb1613e4013115",
+  "name": "GTFS Schedule",
+  "tsconfigPath": "./src/server/tsconfig.json"
+}

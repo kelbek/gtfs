@@ -1,0 +1,48 @@
+<div>
+  <div ng-if="!c.data.hasFeed" class="gtfs-card gtfs-muted">
+    <i class="fa fa-info-circle" aria-hidden="true"></i>
+    No timetable is published yet.
+  </div>
+
+  <div ng-if="c.data.hasFeed &amp;&amp; !c.data.stop" class="gtfs-card gtfs-muted">
+    Stop not found.
+  </div>
+
+  <div ng-if="c.data.hasFeed &amp;&amp; c.data.stop">
+    <div class="gtfs-hero">
+      <h1 ng-bind="c.data.stop.stop_name"></h1>
+      <p ng-if="c.data.stop.stop_code">Stop code: <span ng-bind="c.data.stop.stop_code"></span></p>
+    </div>
+
+    <div class="gtfs-card">
+      <h2>Accessibility</h2>
+      <p>Wheelchair boarding: <span ng-bind="c.data.stop.wheelchair_text"></span></p>
+    </div>
+
+    <div class="gtfs-card" ng-if="c.data.stop.is_station &amp;&amp; c.data.stop.children.length">
+      <h2>Platforms</h2>
+      <ul class="gtfs-result-list">
+        <li ng-repeat="ch in c.data.stop.children track by ch.stop_id">
+          <a ng-href="?id=x_msag_gtfs_schedu_stop&amp;stop_id={{ch.stop_id}}">
+            <span ng-bind="ch.stop_name"></span>
+            <span class="gtfs-muted" ng-if="ch.platform_code"> &middot; Platform {{ch.platform_code}}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="gtfs-card">
+      <h2>Routes serving this stop</h2>
+      <p class="gtfs-muted" ng-if="!c.data.stop.routes.length">No routes serve this stop.</p>
+      <a ng-repeat="r in c.data.stop.routes track by r.route_id"
+         ng-href="?id={{c.data.routePage}}&amp;route_id={{r.route_id}}"
+         style="margin-right:8px; display:inline-block;">
+        <gtfs-route-badge route="r"></gtfs-route-badge>
+      </a>
+    </div>
+
+    <p>
+      <a ng-href="?id=x_msag_gtfs_schedu_stop&amp;stop_id={{c.data.stop.stop_id}}">View departures below</a>
+    </p>
+  </div>
+</div>

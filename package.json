@@ -1,0 +1,19 @@
+{
+    "name": "x-msag-gtfs-schedule",
+    "version": "1.0.0",
+    "description": "[BUILD AGENT GENERATED]:  Scoped application for storing a GTFS Schedule transit feed and exposing it through an anonymous Service Portal. Phase 1 MVP: feed versioning, stops, routes, trips, stop times, calendars, and derived service days, with admin import/validation/activation and guest-facing read access via an encapsulated Script Include.",
+    "license": "UNLICENSED",
+    "imports": {
+        "#now:*": "./@types/servicenow/fluent/*/index.js"
+    },
+    "scripts": {
+        "build": "now-sdk build",
+        "deploy": "now-sdk install",
+        "transform": "now-sdk transform",
+        "types": "now-sdk dependencies"
+    },
+    "devDependencies": {
+        "@servicenow/sdk": "4.13.6",
+        "@servicenow/glide": "27.0.5"
+    }
+}

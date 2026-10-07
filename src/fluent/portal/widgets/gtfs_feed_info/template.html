@@ -1,0 +1,49 @@
+<div>
+  <!-- No active feed -->
+  <div ng-if="!c.data.feed" class="gtfs-card gtfs-muted">
+    <i class="fa fa-info-circle" aria-hidden="true"></i>
+    No timetable is published yet.
+  </div>
+
+  <!-- Compact one-line validity banner -->
+  <div ng-if="c.data.feed &amp;&amp; c.data.compact" class="gtfs-card">
+    <strong>Timetable valid</strong>
+    {{c.data.feed.valid_from}} &ndash; {{c.data.feed.valid_until}}
+  </div>
+
+  <!-- Full feed card -->
+  <div ng-if="c.data.feed &amp;&amp; !c.data.compact" class="gtfs-card">
+    <h2 ng-bind="c.data.feed.name"></h2>
+    <dl class="dl-horizontal">
+      <dt>Publisher</dt>
+      <dd>
+        <span ng-bind="c.data.feed.publisher_name"></span>
+        <a ng-if="c.data.feed.publisher_url" ng-href="{{c.data.feed.publisher_url}}"
+           target="_blank" rel="noopener noreferrer">{{c.data.feed.publisher_url}}</a>
+      </dd>
+      <dt>Feed version</dt>
+      <dd ng-bind="c.data.feed.feed_version"></dd>
+      <dt>Valid</dt>
+      <dd>{{c.data.feed.valid_from}} &ndash; {{c.data.feed.valid_until}}</dd>
+      <dt ng-if="c.data.feed.license_text">License</dt>
+      <dd ng-if="c.data.feed.license_text" ng-bind="c.data.feed.license_text"></dd>
+    </dl>
+
+    <div ng-if="c.data.feed.agency">
+      <h3>Agency</h3>
+      <dl class="dl-horizontal">
+        <dt>Name</dt>
+        <dd ng-bind="c.data.feed.agency.agency_name"></dd>
+        <dt ng-if="c.data.feed.agency.agency_url">Website</dt>
+        <dd ng-if="c.data.feed.agency.agency_url">
+          <a ng-href="{{c.data.feed.agency.agency_url}}" target="_blank"
+             rel="noopener noreferrer">{{c.data.feed.agency.agency_url}}</a>
+        </dd>
+        <dt ng-if="c.data.feed.agency.agency_phone">Phone</dt>
+        <dd ng-if="c.data.feed.agency.agency_phone" ng-bind="c.data.feed.agency.agency_phone"></dd>
+        <dt ng-if="c.data.feed.agency.agency_email">Email</dt>
+        <dd ng-if="c.data.feed.agency.agency_email" ng-bind="c.data.feed.agency.agency_email"></dd>
+      </dl>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+<div>
+  <div ng-if="!c.data.hasFeed" class="gtfs-card gtfs-muted">
+    <i class="fa fa-info-circle" aria-hidden="true"></i>
+    No timetable is published yet.
+  </div>
+
+  <div ng-if="c.data.hasFeed &amp;&amp; !c.data.board.stop" class="gtfs-card gtfs-muted">
+    Stop not found.
+  </div>
+
+  <div ng-if="c.data.hasFeed &amp;&amp; c.data.board.stop" class="gtfs-card">
+    <h2>Departures from <span ng-bind="c.data.board.stop.stop_name"></span></h2>
+
+    <form class="form-inline" ng-submit="c.refresh()">
+      <div class="form-group">
+        <label for="gtfs-dep-date">Date</label>
+        <input id="gtfs-dep-date" type="date" class="form-control" ng-model="c.date" />
+      </div>
+      <div class="form-group">
+        <label for="gtfs-dep-time">From time</label>
+        <input id="gtfs-dep-time" type="time" class="form-control" ng-model="c.time" />
+      </div>
+      <button type="submit" class="btn btn-primary">Refresh</button>
+    </form>
+
+    <div aria-live="polite">
+      <table class="table" ng-if="c.data.board.departures.length">
+        <caption class="sr-only">Upcoming departures</caption>
+        <thead>
+          <tr>
+            <th scope="col">Line</th>
+            <th scope="col">Destination</th>
+            <th scope="col">Departure</th>
+            <th scope="col">Platform</th>
+            <th scope="col">Accessibility</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="d in c.data.board.departures track by $index">
+            <td><gtfs-route-badge route="d"></gtfs-route-badge></td>
+            <td>
+              <a ng-href="?id={{c.data.tripPage}}&amp;trip_id={{d.trip_id}}" ng-bind="d.destination"></a>
+            </td>
+            <td>
+              <span class="gtfs-departure-time">{{d.departure}}</span>
+              <span class="gtfs-nextday" ng-if="d.departure_next_day">+1 day</span>
+            </td>
+            <td><span ng-if="d.platform_code" ng-bind="d.platform_code"></span></td>
+            <td>
+              <i class="fa fa-wheelchair" aria-hidden="true" ng-if="d.wheelchair_accessible === '1'"></i>
+              <span ng-bind="d.wheelchair_text"></span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="gtfs-muted" ng-if="!c.data.board.departures.length">
+        No upcoming departures found for this stop.
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<div>
+  <div ng-if="!c.data.hasFeed" class="gtfs-card gtfs-muted">
+    <i class="fa fa-info-circle" aria-hidden="true"></i>
+    No timetable is published yet.
+  </div>
+
+  <div ng-if="c.data.hasFeed" class="gtfs-card">
+    <form ng-submit="c.onInput()" role="search">
+      <label for="gtfs-search-input"><strong>Search stops and stations</strong></label>
+      <input id="gtfs-search-input" type="search" class="form-control"
+             ng-model="c.term" ng-change="c.onInput()"
+             aria-controls="gtfs-search-results" autocomplete="off"
+             placeholder="Enter a stop or station name" />
+      <p class="gtfs-muted" ng-if="c.term.length &gt; 0 &amp;&amp; c.term.length &lt; 3">
+        Type at least 3 characters to search.
+      </p>
+    </form>
+
+    <div id="gtfs-search-results" aria-live="polite">
+      <ul class="gtfs-result-list" ng-if="c.data.results.length">
+        <li ng-repeat="s in c.data.results track by s.stop_id">
+          <a ng-href="?id={{c.data.stopPage}}&amp;stop_id={{s.stop_id}}">
+            <span ng-bind="s.stop_name"></span>
+            <span class="label label-info" ng-if="s.is_station">Station</span>
+            <span class="gtfs-muted" ng-if="s.stop_code"> &middot; {{s.stop_code}}</span>
+          </a>
+        </li>
+      </ul>
+      <p class="gtfs-muted" ng-if="c.data.query.length &gt;= 3 &amp;&amp; !c.data.results.length">
+        No stops found for &ldquo;<span ng-bind="c.data.query"></span>&rdquo;.
+      </p>
+    </div>
+  </div>
+</div>

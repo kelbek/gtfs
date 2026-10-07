@@ -1,0 +1,29 @@
+<div>
+  <div ng-if="!c.data.hasFeed" class="gtfs-card gtfs-muted">
+    <i class="fa fa-info-circle" aria-hidden="true"></i>
+    No timetable is published yet.
+  </div>
+
+  <div ng-if="c.data.hasFeed">
+    <h1>Routes</h1>
+
+    <fieldset class="gtfs-card" ng-if="c.data.modes.length">
+      <legend>Filter by mode</legend>
+      <label ng-repeat="m in c.data.modes track by m.value" style="margin-right:16px;">
+        <input type="checkbox" ng-model="c.selected[m.value]" />
+        <span ng-bind="m.label"></span>
+      </label>
+    </fieldset>
+
+    <ul class="gtfs-result-list">
+      <li ng-repeat="r in c.data.routes | filter:c.matches track by r.route_id">
+        <a ng-href="?id={{c.data.routePage}}&amp;route_id={{r.route_id}}">
+          <gtfs-route-badge route="r"></gtfs-route-badge>
+          <span ng-bind="r.display_name"></span>
+        </a>
+      </li>
+    </ul>
+
+    <p class="gtfs-muted" ng-if="!c.data.routes.length">No routes are published yet.</p>
+  </div>
+</div>
