@@ -69,9 +69,9 @@ Record({
     data: {
         title: 'GTFS Data Sources',
         application: menu,
-        link_type: 'FILTER',
+        link_type: 'LIST',
         name: 'sys_data_source',
-        filter: 'nameSTARTSWITHGTFS -',
+        filter: 'nameSTARTSWITHGTFS',
         hint: 'Upload the GTFS CSV files to their Data Sources.',
         roles: [ADMIN],
         active: true,
