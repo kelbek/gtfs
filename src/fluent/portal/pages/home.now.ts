@@ -9,7 +9,7 @@ export const gtfsHomePage = SPPage({
     title: 'Home',
     public: true,
     draft: false,
-    dynamicTitleStructure: 'GTFS – Home - ${portal.title}',
+    dynamicTitleStructure: 'GTFS - Home',
     containers: [
         {
             $id: Now.ID['x_msag_gtfs_schedu_home_container'],

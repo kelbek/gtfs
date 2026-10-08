@@ -26,6 +26,7 @@ GtfsPostProcess.T = {
     calDate: 'x_msag_gtfs_schedu_cal_date',
     serviceDay: 'x_msag_gtfs_schedu_service_day',
     impStops: 'x_msag_gtfs_schedu_imp_stops',
+    impFeed: 'x_msag_gtfs_schedu_imp_feed',
 }
 
 GtfsPostProcess.prototype = {
@@ -216,12 +217,16 @@ GtfsPostProcess.prototype = {
         fg.setValue('cnt_trips', this._count(GtfsPostProcess.T.trip, feedId))
         fg.setValue('cnt_stop_times', this._count(GtfsPostProcess.T.stopTime, feedId))
 
-        // valid_from/until fallback from service days when feed_info.txt was missing
-        if (!fg.getValue('valid_from') || !fg.getValue('valid_until')) {
-            var range = this._serviceDayRange(feedId)
-            if (range.min && !fg.getValue('valid_from')) fg.setValue('valid_from', range.min)
-            if (range.max && !fg.getValue('valid_until')) fg.setValue('valid_until', range.max)
-        }
+        // Validity window. Recomputed every run (idempotent/self-healing). The publisher's
+        // declared window in feed_info.txt wins when provided; otherwise we use the actual
+        // service-day span, which is the true operating period the portal serves. This
+        // avoids a misleading "valid_from == valid_until" when feed_info has no dates.
+        var fi = this._feedInfoDates(feedId)
+        var range = this._serviceDayRange(feedId)
+        var validFrom = fi.from || range.min
+        var validUntil = fi.until || range.max
+        if (validFrom) fg.setValue('valid_from', validFrom)
+        if (validUntil) fg.setValue('valid_until', validUntil)
 
         if (!fg.getValue('imported_on')) fg.setValue('imported_on', new GlideDateTime().getValue())
         fg.setWorkflow(false)
@@ -247,15 +252,47 @@ GtfsPostProcess.prototype = {
     },
 
     _serviceDayRange: function (feedId) {
-        var ga = new GlideAggregate(GtfsPostProcess.T.serviceDay)
-        ga.addQuery('feed', feedId)
-        ga.addAggregate('MIN', 'date')
-        ga.addAggregate('MAX', 'date')
-        ga.query()
-        if (ga.next()) {
-            return { min: ga.getAggregate('MIN', 'date'), max: ga.getAggregate('MAX', 'date') }
+        // NOTE: requesting MIN and MAX on the SAME field in one GlideAggregate returns the
+        // same value for both (a known quirk), which previously made valid_until == valid_from.
+        // Use two separate ordered single-row reads instead — reliable and index-friendly.
+        var min = ''
+        var max = ''
+        var lo = new GlideRecord(GtfsPostProcess.T.serviceDay)
+        lo.addQuery('feed', feedId)
+        lo.orderBy('date')
+        lo.setLimit(1)
+        lo.query()
+        if (lo.next()) min = lo.getValue('date')
+
+        var hi = new GlideRecord(GtfsPostProcess.T.serviceDay)
+        hi.addQuery('feed', feedId)
+        hi.orderByDesc('date')
+        hi.setLimit(1)
+        hi.query()
+        if (hi.next()) max = hi.getValue('date')
+
+        return { min: min, max: max }
+    },
+
+    /**
+     * Publisher-declared validity window from the latest feed_info.txt import set, if any.
+     * feed_info is optional and often absent; returns empty strings when not provided, so
+     * the caller falls back to the service-day span.
+     */
+    _feedInfoDates: function (feedId) {
+        var out = { from: '', until: '' }
+        var importSetId = this._latestImportSet(GtfsPostProcess.T.impFeed)
+        if (!importSetId) return out
+        var ig = new GlideRecord(GtfsPostProcess.T.impFeed)
+        ig.addQuery('sys_import_set', importSetId)
+        ig.setLimit(1)
+        ig.query()
+        if (ig.next()) {
+            var u = new GtfsUtil()
+            out.from = u.parseGtfsDate(ig.getValue('u_feed_start_date'))
+            out.until = u.parseGtfsDate(ig.getValue('u_feed_end_date'))
         }
-        return { min: '', max: '' }
+        return out
     },
 
     _truthy: function (v) {

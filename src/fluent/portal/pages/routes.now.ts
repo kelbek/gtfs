@@ -7,7 +7,7 @@ export const gtfsRoutesPage = SPPage({
     title: 'Routes',
     public: true,
     draft: false,
-    dynamicTitleStructure: 'GTFS – Routes - ${portal.title}',
+    dynamicTitleStructure: 'GTFS - Routes',
     containers: [
         {
             $id: Now.ID['x_msag_gtfs_schedu_routes_container'],

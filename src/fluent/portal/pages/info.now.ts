@@ -7,7 +7,7 @@ export const gtfsInfoPage = SPPage({
     title: 'Info',
     public: true,
     draft: false,
-    dynamicTitleStructure: 'GTFS – Info - ${portal.title}',
+    dynamicTitleStructure: 'GTFS - Info',
     containers: [
         {
             $id: Now.ID['x_msag_gtfs_schedu_info_container'],

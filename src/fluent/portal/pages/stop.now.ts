@@ -8,7 +8,7 @@ export const gtfsStopPage = SPPage({
     title: 'Stop',
     public: true,
     draft: false,
-    dynamicTitleStructure: 'GTFS – Stop - ${portal.title}',
+    dynamicTitleStructure: 'GTFS - Stop',
     containers: [
         {
             $id: Now.ID['x_msag_gtfs_schedu_stop_container'],
