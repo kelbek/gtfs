@@ -9,6 +9,7 @@ export const gtfsFooter = SPHeaderFooter({
     $id: Now.ID['x_msag_gtfs_schedu_footer'],
     name: 'GTFS Portal Footer',
     id: 'x_msag_gtfs_schedu_footer',
+    public: true,
     static: false,
     htmlTemplate: Now.include('./template.html'),
     category: 'custom',

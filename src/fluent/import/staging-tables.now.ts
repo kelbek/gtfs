@@ -105,6 +105,22 @@ export const x_msag_gtfs_schedu_imp_trips = Table({
         u_direction_id: StringColumn({ label: 'direction_id', maxLength: 10 }),
         u_wheelchair_accessible: StringColumn({ label: 'wheelchair_accessible', maxLength: 10 }),
         u_bikes_allowed: StringColumn({ label: 'bikes_allowed', maxLength: 10 }),
+        u_block_id: StringColumn({
+            attributes: {
+                edge_encryption_enabled: true,
+                import_attribute_name: 'block_id',
+            },
+            label: 'block_id',
+            maxLength: 40,
+        }),
+        u_shape_id: StringColumn({
+            attributes: {
+                edge_encryption_enabled: true,
+                import_attribute_name: 'shape_id',
+            },
+            label: 'shape_id',
+            maxLength: 40,
+        }),
     },
 })
 
@@ -126,6 +142,22 @@ export const x_msag_gtfs_schedu_imp_stimes = Table({
         // Flex columns — only read to detect and skip Flex rows in the MVP.
         u_location_id: StringColumn({ label: 'location_id', maxLength: 255 }),
         u_location_group_id: StringColumn({ label: 'location_group_id', maxLength: 255 }),
+        u_drop_off_time: StringColumn({
+            attributes: {
+                edge_encryption_enabled: true,
+                import_attribute_name: 'drop_off_time',
+            },
+            label: 'drop_off_time',
+            maxLength: 40,
+        }),
+        u_shape_dist_traveled: StringColumn({
+            attributes: {
+                edge_encryption_enabled: true,
+                import_attribute_name: 'shape_dist_traveled',
+            },
+            label: 'shape_dist_traveled',
+            maxLength: 40,
+        }),
     },
 })
 

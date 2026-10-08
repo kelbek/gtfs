@@ -27,25 +27,63 @@ GtfsAdmin.prototype = {
 
     /** Background router invoked by the Script Action. */
     dispatch: function (op, feedId) {
+        // The Script Action passes event.parm1/parm2, which are GlideElement objects, not
+        // primitive strings. `switch` uses strict equality, so coerce to String first —
+        // otherwise every case misses and we fall through to "unknown operation".
+        op = op === null || op === undefined ? '' : String(op)
+        feedId = feedId === null || feedId === undefined ? '' : String(feedId)
         if (!op || !feedId) return
-        switch (op) {
-            case 'import':
-                new GtfsImportRunner().transform(feedId)
-                break
-            case 'process':
-                new GtfsPostProcess().run(feedId)
-                var v = new GtfsValidation().validate(feedId)
-                // A clean (error-free) feed becomes ready to activate.
-                if (!v.hasErrors) this._setStatusIf(feedId, 'importing', 'staging')
-                break
-            case 'reset':
-                new GtfsLifecycle().resetFeed(feedId)
-                break
-            case 'cleanup':
-                new GtfsLifecycle().cleanupArchivedFeeds()
-                break
-            default:
-                gs.warn('[GtfsAdmin] unknown operation: ' + op)
+        this._log(feedId, '[' + op + '] started ' + new GlideDateTime().getValue())
+        try {
+            switch (op) {
+                case 'import':
+                    new GtfsImportRunner().transform(feedId)
+                    this._log(feedId, '[import] transform chain complete')
+                    break
+                case 'process':
+                    new GtfsPostProcess().run(feedId)
+                    var v = new GtfsValidation().validate(feedId)
+                    // A clean (error-free) feed becomes ready to activate.
+                    if (!v.hasErrors) this._setStatusIf(feedId, 'importing', 'staging')
+                    this._log(
+                        feedId,
+                        '[process] ' +
+                            (v.hasErrors
+                                ? 'completed WITH validation errors (feed stays in its current status)'
+                                : 'completed; feed ready to activate'),
+                    )
+                    break
+                case 'reset':
+                    // resetFeed clears validation_log, so log the outcome AFTER it runs.
+                    new GtfsLifecycle().resetFeed(feedId)
+                    this._log(feedId, '[reset] feed data cleared; status returned to importing')
+                    break
+                case 'cleanup':
+                    new GtfsLifecycle().cleanupArchivedFeeds()
+                    this._log(feedId, '[cleanup] archived-feed cleanup pass complete')
+                    break
+                default:
+                    gs.warn('[GtfsAdmin] unknown operation: ' + op)
+                    this._log(feedId, '[' + op + '] unknown operation — ignored')
+            }
+        } catch (e) {
+            // Make background failures visible instead of silently swallowing them.
+            gs.error('[GtfsAdmin] dispatch "' + op + '" failed for feed ' + feedId + ': ' + e)
+            this._log(feedId, '[' + op + '] ERROR: ' + e)
+        }
+    },
+
+    /** Append a line to the feed's validation_log so background progress/errors are visible. */
+    _log: function (feedId, msg) {
+        try {
+            var fg = new GlideRecord(GtfsAdmin.FEED_TABLE)
+            if (fg.get(feedId)) {
+                var existing = fg.getValue('validation_log') || ''
+                fg.setValue('validation_log', existing ? existing + '\n' + msg : msg)
+                fg.update()
+            }
+        } catch (e) {
+            gs.error('[GtfsAdmin] could not write to validation_log: ' + e)
         }
     },
 

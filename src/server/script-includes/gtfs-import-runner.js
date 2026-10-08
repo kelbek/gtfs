@@ -149,7 +149,6 @@ GtfsImportRunner.prototype = {
                 var transformer = new GlideImportSetTransformer()
                 transformer.transformAllMaps(importSet)
                 importSet.setValue('state', 'processed')
-                importSet.setWorkflow(false)
                 importSet.update()
                 processed.push(importSet.getValue('number'))
             } catch (e) {

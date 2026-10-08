@@ -25,6 +25,14 @@ declare global {
                         table: 'sys_app_module'
                         id: '56f648edc3b7c75092fb1613e40131aa'
                     }
+                    '70cdcb6dc3fb8b5092fb1613e4013127': {
+                        table: 'sys_scope_privilege'
+                        id: '70cdcb6dc3fb8b5092fb1613e4013127'
+                    }
+                    '78cdcb6dc3fb8b5092fb1613e401312e': {
+                        table: 'sys_scope_privilege'
+                        id: '78cdcb6dc3fb8b5092fb1613e401312e'
+                    }
                     '790888e1c3f7c75092fb1613e40131fa': {
                         table: 'sys_app_module'
                         id: '790888e1c3f7c75092fb1613e40131fa'
@@ -60,6 +68,170 @@ declare global {
                     aa8c0461c33bc75092fb1613e401318b: {
                         table: 'sys_properties'
                         id: 'aa8c0461c33bc75092fb1613e401318b'
+                    }
+                    acl_agency_create: {
+                        table: 'sys_security_acl'
+                        id: '40a9b406dd9a41a58ff137cdc58c9318'
+                    }
+                    acl_agency_delete: {
+                        table: 'sys_security_acl'
+                        id: '0bab6a96affa4ce7a1e50c2b3b9c6bd5'
+                    }
+                    acl_agency_read: {
+                        table: 'sys_security_acl'
+                        id: 'b300f715d724471b962a05ff9b6aadba'
+                    }
+                    acl_agency_write: {
+                        table: 'sys_security_acl'
+                        id: '2656ee07fd2642e2960d579e6d4b3aa4'
+                    }
+                    acl_cal_date_create: {
+                        table: 'sys_security_acl'
+                        id: 'efd114277c064b6bb5d3bb25dd03c681'
+                    }
+                    acl_cal_date_delete: {
+                        table: 'sys_security_acl'
+                        id: 'ef0b217237394abfb26d4e5b71be587f'
+                    }
+                    acl_cal_date_read: {
+                        table: 'sys_security_acl'
+                        id: '0052adb6ce774e748f7fc07e71c6e39a'
+                    }
+                    acl_cal_date_write: {
+                        table: 'sys_security_acl'
+                        id: '79bc9fa3c95445a98133fadc256041d4'
+                    }
+                    acl_calendar_create: {
+                        table: 'sys_security_acl'
+                        id: 'a06582176580404f899cb83a414bd126'
+                    }
+                    acl_calendar_delete: {
+                        table: 'sys_security_acl'
+                        id: 'f6a33b9a764945b28dc689e687e6f68f'
+                    }
+                    acl_calendar_read: {
+                        table: 'sys_security_acl'
+                        id: 'decbd60e666a4df8a5a8777e10e8f75b'
+                    }
+                    acl_calendar_write: {
+                        table: 'sys_security_acl'
+                        id: 'b0ebca5f9a5b4ef49b15b58eed7e0c68'
+                    }
+                    acl_feed_create: {
+                        table: 'sys_security_acl'
+                        id: '3b6c8ff4ab084ef7ae625ffe51cbde59'
+                    }
+                    acl_feed_delete: {
+                        table: 'sys_security_acl'
+                        id: '554a9b4584b34afa9d115e474c00d61f'
+                    }
+                    acl_feed_read: {
+                        table: 'sys_security_acl'
+                        id: '42ce4ca256b04460a4f950b0d50e980b'
+                    }
+                    acl_feed_write: {
+                        table: 'sys_security_acl'
+                        id: '15ec1a3950064e1c9c4cb2c0d131c4a8'
+                    }
+                    acl_route_create: {
+                        table: 'sys_security_acl'
+                        id: 'f7ca019cc8da42dca0abb7ba4bf3061d'
+                    }
+                    acl_route_delete: {
+                        table: 'sys_security_acl'
+                        id: '0369f8bd385c49e4abc6bc3c1fc8bcd6'
+                    }
+                    acl_route_read: {
+                        table: 'sys_security_acl'
+                        id: 'bd0554774f004d2eb7fe949720749afc'
+                    }
+                    acl_route_write: {
+                        table: 'sys_security_acl'
+                        id: '5366d5e1a749409d8da4ad98c6b3b83d'
+                    }
+                    acl_service_day_create: {
+                        table: 'sys_security_acl'
+                        id: '2badb45543104533a5063fb7ce61c876'
+                    }
+                    acl_service_day_delete: {
+                        table: 'sys_security_acl'
+                        id: 'f9f4765973654f66b0a99bdfbd16b736'
+                    }
+                    acl_service_day_read: {
+                        table: 'sys_security_acl'
+                        id: '4d35875740bc401986291d19731c2e42'
+                    }
+                    acl_service_day_write: {
+                        table: 'sys_security_acl'
+                        id: '4ffbeb38d1b5479a858ea18eeaf63f78'
+                    }
+                    acl_stop_create: {
+                        table: 'sys_security_acl'
+                        id: 'bd9ee79fdfe14b86bfad089ede365a99'
+                    }
+                    acl_stop_delete: {
+                        table: 'sys_security_acl'
+                        id: 'b10b3620e2d345cda7f462b42e648c19'
+                    }
+                    acl_stop_read: {
+                        table: 'sys_security_acl'
+                        id: '392ba868a6c24eeb8d5b4de142b7d149'
+                    }
+                    acl_stop_time_create: {
+                        table: 'sys_security_acl'
+                        id: '2a228027907843a6a61874375948cc77'
+                    }
+                    acl_stop_time_delete: {
+                        table: 'sys_security_acl'
+                        id: '641f4c654d2e4405b4b6bd6e94878515'
+                    }
+                    acl_stop_time_read: {
+                        table: 'sys_security_acl'
+                        id: 'd287bac0a1224fb185f61f10ad03c0af'
+                    }
+                    acl_stop_time_write: {
+                        table: 'sys_security_acl'
+                        id: '0141776938064cebb1640b240431091e'
+                    }
+                    acl_stop_write: {
+                        table: 'sys_security_acl'
+                        id: '91af8a44bb864f6cbff39ed92c7e10e6'
+                    }
+                    acl_trip_create: {
+                        table: 'sys_security_acl'
+                        id: 'ebf1ac952ca1434c855f36c7c8903432'
+                    }
+                    acl_trip_delete: {
+                        table: 'sys_security_acl'
+                        id: 'db219113da5b4ed08491e11f2a120bed'
+                    }
+                    acl_trip_read: {
+                        table: 'sys_security_acl'
+                        id: '26fa405a9a4f4910aff59214b709ce36'
+                    }
+                    acl_trip_write: {
+                        table: 'sys_security_acl'
+                        id: '1316815247bf449f85dc11943b58cb86'
+                    }
+                    atf_gtfs_service_guards: {
+                        table: 'sys_atf_test'
+                        id: '4f12556d99e441e4a1e9858f5dbccac2'
+                    }
+                    atf_gtfs_service_guards_step: {
+                        table: 'sys_atf_step'
+                        id: '1304273bab3341278f17339cd26ac51d'
+                    }
+                    atf_gtfs_suite: {
+                        table: 'sys_atf_test_suite'
+                        id: '5e8e784c0a9b4925945d15fff84fead0'
+                    }
+                    atf_gtfs_util: {
+                        table: 'sys_atf_test'
+                        id: '33d68747256e42afb565431f15c49646'
+                    }
+                    atf_gtfs_util_step: {
+                        table: 'sys_atf_step'
+                        id: '8013978c616e40f0b44af2d7b2f6ce8a'
                     }
                     bom_json: {
                         table: 'sys_module'
@@ -108,6 +280,10 @@ declare global {
                     e4ba082dc3f7c75092fb1613e4013167: {
                         table: 'sys_scope_privilege'
                         id: 'e4ba082dc3f7c75092fb1613e4013167'
+                    }
+                    eccd8b6dc3fb8b5092fb1613e40131a0: {
+                        table: 'sys_scope_privilege'
+                        id: 'eccd8b6dc3fb8b5092fb1613e40131a0'
                     }
                     evt_feed_op: {
                         table: 'sysevent_register'
@@ -647,6 +823,19 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_security_acl_role'
+                        id: '01e5420aaa1744999fc53b889e609cc8'
+                        key: {
+                            sys_security_acl: '641f4c654d2e4405b4b6bd6e94878515'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '02ddde4d3cf74881bba330db83dd09b0'
                         key: {
@@ -813,6 +1002,19 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_security_acl_role'
+                        id: '0541fd7ad9444ad5963d8f6e83f67435'
+                        key: {
+                            sys_security_acl: 'b10b3620e2d345cda7f462b42e648c19'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '057c928b65e44448adaf0f6586100385'
                         key: {
@@ -850,6 +1052,19 @@ declare global {
                         key: {
                             logical_table_name: 'x_msag_gtfs_schedu_stop'
                             col_name_string: 'parent_station'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '07fc0f4248a547a5a11f2b33b9d6e86c'
+                        key: {
+                            sys_security_acl: '5366d5e1a749409d8da4ad98c6b3b83d'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
                         }
                     },
                     {
@@ -1543,6 +1758,15 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_element_mapping'
+                        id: '17d956b3c4ff49eebd87ceb94fa23842'
+                        key: {
+                            id: '8013978c616e40f0b44af2d7b2f6ce8a'
+                            table: 'var__m_atf_input_variable_41de4a935332120028bc29cac2dc349a'
+                            field: 'script'
+                        }
+                    },
+                    {
                         table: 'sys_ui_form_section'
                         id: '181a9adb581b48b9b472c0070d67105a'
                         key: {
@@ -1789,9 +2013,22 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_security_acl_role'
+                        id: '1d19e25238eb4e2c9ae7064b2c80a6d4'
+                        key: {
+                            sys_security_acl: '2a228027907843a6a61874375948cc77'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '1da797d4683e4249b1dbd3103d3ec346'
-                        deleted: true
+                        deleted: false
                         key: {
                             name: 'x_msag_gtfs_schedu_imp_trips'
                             element: 'u_shape_id'
@@ -1923,7 +2160,7 @@ declare global {
                     {
                         table: 'sys_dictionary'
                         id: '22b5788597c64bf5aaed1bccd4d067e6'
-                        deleted: true
+                        deleted: false
                         key: {
                             name: 'x_msag_gtfs_schedu_imp_stimes'
                             element: 'u_shape_dist_traveled'
@@ -1989,6 +2226,19 @@ declare global {
                             }
                             element: '.end_split'
                             position: '11'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '2603a659a5f44c3794568d8e9caa9a99'
+                        key: {
+                            sys_security_acl: '79bc9fa3c95445a98133fadc256041d4'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
                         }
                     },
                     {
@@ -2326,6 +2576,14 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_atf_test_suite_test'
+                        id: '2d837a86c51e47c9990cb4c1676ad108'
+                        key: {
+                            test_suite: '5e8e784c0a9b4925945d15fff84fead0'
+                            test: '4f12556d99e441e4a1e9858f5dbccac2'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '2ddca5c8bf2542798d310797617e80f9'
                         key: {
@@ -2443,7 +2701,7 @@ declare global {
                     {
                         table: 'sys_documentation'
                         id: '311bf373bfb54fef8e9c026a388e217c'
-                        deleted: true
+                        deleted: false
                         key: {
                             name: 'x_msag_gtfs_schedu_imp_trips'
                             element: 'u_block_id'
@@ -2500,6 +2758,19 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_security_acl_role'
+                        id: '3561846a44cf42fb9f856badb7eca701'
+                        key: {
+                            sys_security_acl: '0052adb6ce774e748f7fc07e71c6e39a'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
+                        }
+                    },
+                    {
                         table: 'sys_choice'
                         id: '35e417db4e584185a09f3eb25f7f3773'
                         key: {
@@ -2538,6 +2809,19 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_security_acl_role'
+                        id: '3758be3454504bccb568efc237746338'
+                        key: {
+                            sys_security_acl: 'efd114277c064b6bb5d3bb25dd03c681'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: '379e915bac8748c388a5c383716c8ad0'
                         key: {
@@ -2553,6 +2837,19 @@ declare global {
                             name: 'x_msag_gtfs_schedu_imp_routes'
                             element: 'u_route_long_name'
                             language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '37bca88a3d594ac7a6e2b140f893063f'
+                        key: {
+                            sys_security_acl: 'a06582176580404f899cb83a414bd126'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
                         }
                     },
                     {
@@ -2696,6 +2993,27 @@ declare global {
                         key: {
                             map: '7ef6da532bcd464baab8601c7f605324'
                             target_field: 'route_url'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '3c65d0efa899475f9c5d708726ab795c'
+                        key: {
+                            sys_security_acl: '2badb45543104533a5063fb7ce61c876'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '3c6fb52d94b5459c9986c6b4b204a444'
+                        key: {
+                            document_key: '8013978c616e40f0b44af2d7b2f6ce8a'
+                            variable: '989d9e235324220002c6435723dc3484'
                         }
                     },
                     {
@@ -2906,6 +3224,19 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_security_acl_role'
+                        id: '45e5efdc5ae440d294e86f829e4e592c'
+                        key: {
+                            sys_security_acl: 'f7ca019cc8da42dca0abb7ba4bf3061d'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
+                        }
+                    },
+                    {
                         table: 'sys_ui_element'
                         id: '45fe7815650b406482455a315f7d653f'
                         key: {
@@ -3041,6 +3372,14 @@ declare global {
                             }
                             element: 'color_fg'
                             position: '12'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '4897e878e20c41caaffa108c56930557'
+                        key: {
+                            document_key: '1304273bab3341278f17339cd26ac51d'
+                            variable: '42f2564b73031300440211d8faf6a777'
                         }
                     },
                     {
@@ -3184,6 +3523,19 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_security_acl_role'
+                        id: '4ce526107bf245eca7881f4ccbbf25ce'
+                        key: {
+                            sys_security_acl: '0141776938064cebb1640b240431091e'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: '4d1103925b9f4c41a20043864bbbf0e9'
                         key: {
@@ -3233,6 +3585,19 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_security_acl_role'
+                        id: '4fa8b48448314988bb4c29bf542688da'
+                        key: {
+                            sys_security_acl: '42ce4ca256b04460a4f950b0d50e980b'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: '4fc2fb0aea974a1d9484a06292212e4a'
                         key: {
@@ -3272,6 +3637,19 @@ declare global {
                         key: {
                             name: 'x_msag_gtfs_schedu_imp_caldt'
                             element: 'NULL'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '517ec99c03844fea92bdf37d7b292ee2'
+                        key: {
+                            sys_security_acl: '91af8a44bb864f6cbff39ed92c7e10e6'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
                         }
                     },
                     {
@@ -3515,7 +3893,7 @@ declare global {
                     {
                         table: 'sys_documentation'
                         id: '55c7ab6fbf9b4873a64e20758f5d00e1'
-                        deleted: true
+                        deleted: false
                         key: {
                             name: 'x_msag_gtfs_schedu_imp_stimes'
                             element: 'u_drop_off_time'
@@ -3529,6 +3907,19 @@ declare global {
                             name: 'x_msag_gtfs_schedu_feed'
                             element: 'activated_on'
                             language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '5665e3b641614400ab27e77c8b4c4351'
+                        key: {
+                            sys_security_acl: '4ffbeb38d1b5479a858ea18eeaf63f78'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
                         }
                     },
                     {
@@ -3988,6 +4379,19 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_security_acl_role'
+                        id: '6387d812864944af848a79bb3dca33e5'
+                        key: {
+                            sys_security_acl: 'f6a33b9a764945b28dc689e687e6f68f'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '63f21e7a00c2405ab785c13604dee149'
                         key: {
@@ -4093,7 +4497,7 @@ declare global {
                     {
                         table: 'sys_dictionary'
                         id: '661c5c6d75f34aebbcd30c4d67ba7c93'
-                        deleted: true
+                        deleted: false
                         key: {
                             name: 'x_msag_gtfs_schedu_imp_trips'
                             element: 'u_block_id'
@@ -4228,6 +4632,19 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_security_acl_role'
+                        id: '6a7347b6ba744bf38f42cc1ac96d7ce0'
+                        key: {
+                            sys_security_acl: 'decbd60e666a4df8a5a8777e10e8f75b'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: '6a8e0113c8ef45b39b52b77f6ee2ca73'
                         key: {
@@ -4251,6 +4668,14 @@ declare global {
                             name: 'x_msag_gtfs_schedu_imp_stops'
                             element: 'NULL'
                             language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '6b08e87b3b4b4a62b9bbba935e9d14c8'
+                        key: {
+                            document_key: '8013978c616e40f0b44af2d7b2f6ce8a'
+                            variable: '42f2564b73031300440211d8faf6a777'
                         }
                     },
                     {
@@ -4335,6 +4760,19 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_security_acl_role'
+                        id: '6f75ced57c16438790bb3d1aa2d2105a'
+                        key: {
+                            sys_security_acl: '15ec1a3950064e1c9c4cb2c0d131c4a8'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: '6f7c5474d6ea4ad988cc73434a1e214b'
                         key: {
@@ -4363,6 +4801,19 @@ declare global {
                             }
                             element: 'agency_email'
                             position: '10'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '7000b8bc42254c6cba587bb2a3fd4a59'
+                        key: {
+                            sys_security_acl: '0bab6a96affa4ce7a1e50c2b3b9c6bd5'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
                         }
                     },
                     {
@@ -4664,6 +5115,14 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_variable_value'
+                        id: '76a284b392724f25b70ea75e030ac03a'
+                        key: {
+                            document_key: '1304273bab3341278f17339cd26ac51d'
+                            variable: '989d9e235324220002c6435723dc3484'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '76aa94407c224ff088e274db497d85bf'
                         key: {
@@ -4733,6 +5192,19 @@ declare global {
                         key: {
                             name: 'x_msag_gtfs_schedu_trip'
                             element: 'service_id'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '79ba70c2dca2468faff19ae16df0d354'
+                        key: {
+                            sys_security_acl: '3b6c8ff4ab084ef7ae625ffe51cbde59'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
                         }
                     },
                     {
@@ -4856,6 +5328,27 @@ declare global {
                             }
                             element: 'date'
                             position: '2'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '7eb8ceb007084db0bb2fda8181973483'
+                        key: {
+                            sys_security_acl: 'f9f4765973654f66b0a99bdfbd16b736'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_atf_test_suite_test'
+                        id: '7ebe2fb2fe284f62b40651114e9a0fc7'
+                        key: {
+                            test_suite: '5e8e784c0a9b4925945d15fff84fead0'
+                            test: '33d68747256e42afb565431f15c49646'
                         }
                     },
                     {
@@ -5250,6 +5743,19 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_security_acl_role'
+                        id: '883a2cdd8fc5443c9e8ee4132f996148'
+                        key: {
+                            sys_security_acl: 'ef0b217237394abfb26d4e5b71be587f'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
+                        }
+                    },
+                    {
                         table: 'sys_choice'
                         id: '885ecd7675cb4fe897fe5fbbf9577e61'
                         key: {
@@ -5358,6 +5864,15 @@ declare global {
                         id: '8acf2d81ed1143d69b20b4482568b725'
                         key: {
                             id: 'x_msag_gtfs_schedu_info'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: '8b0562e7076a4125a020eb0e4c27e5e2'
+                        key: {
+                            id: '1304273bab3341278f17339cd26ac51d'
+                            table: 'var__m_atf_input_variable_41de4a935332120028bc29cac2dc349a'
+                            field: 'script'
                         }
                     },
                     {
@@ -5607,7 +6122,7 @@ declare global {
                     {
                         table: 'sys_documentation'
                         id: '9210e3ab733e41339e02ad87dbab5146'
-                        deleted: true
+                        deleted: false
                         key: {
                             name: 'x_msag_gtfs_schedu_imp_trips'
                             element: 'u_shape_id'
@@ -5893,7 +6408,7 @@ declare global {
                     {
                         table: 'sys_dictionary'
                         id: '9885ba0d3aaa4761a7fa4cd646048b18'
-                        deleted: true
+                        deleted: false
                         key: {
                             name: 'x_msag_gtfs_schedu_imp_stimes'
                             element: 'u_drop_off_time'
@@ -5906,6 +6421,19 @@ declare global {
                             name: 'x_msag_gtfs_schedu_route'
                             element: 'mode_group'
                             language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '991ae35776ff4c92ae0cc2039b7ff0c8'
+                        key: {
+                            sys_security_acl: '4d35875740bc401986291d19731c2e42'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
                         }
                     },
                     {
@@ -5922,6 +6450,19 @@ declare global {
                         key: {
                             name: 'x_msag_gtfs_schedu_imp_stops'
                             element: 'u_stop_timezone'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '99de86c9fc2a49b6ad50e5efdbff71c8'
+                        key: {
+                            sys_security_acl: '554a9b4584b34afa9d115e474c00d61f'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
                         }
                     },
                     {
@@ -5989,6 +6530,19 @@ declare global {
                         key: {
                             map: '4c7f22acaa1e4c6eba8b4acc2605a890'
                             target_field: 'stop_sequence'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '9cf0b301dcec4aa1ac18c3f6a5ffdbfc'
+                        key: {
+                            sys_security_acl: 'd287bac0a1224fb185f61f10ad03c0af'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
                         }
                     },
                     {
@@ -6343,6 +6897,19 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_security_acl_role'
+                        id: 'a9641f60e97f4f078e29fdb5731bed92'
+                        key: {
+                            sys_security_acl: 'bd9ee79fdfe14b86bfad089ede365a99'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
+                        }
+                    },
+                    {
                         table: 'sys_db_object'
                         id: 'a9db8750e8d7457ea09174bbbb26cfa0'
                         key: {
@@ -6577,6 +7144,19 @@ declare global {
                                         }
                                     }
                                     sys_domain: 'global'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: 'af0aca05f4b24eb09d4c0c3e29ae2f1d'
+                        key: {
+                            sys_security_acl: '26fa405a9a4f4910aff59214b709ce36'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
                                 }
                             }
                         }
@@ -7041,6 +7621,19 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_security_acl_role'
+                        id: 'ba97b61c6ca04096b0e02283031ffbe2'
+                        key: {
+                            sys_security_acl: '1316815247bf449f85dc11943b58cb86'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: 'bb69e37e95824795bbf953d025dd7655'
                         key: {
@@ -7150,6 +7743,19 @@ declare global {
                             }
                             element: 'route_desc'
                             position: '15'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: 'be814fef63ed4447b63bfde7ccde9937'
+                        key: {
+                            sys_security_acl: 'bd0554774f004d2eb7fe949720749afc'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
                         }
                     },
                     {
@@ -7293,6 +7899,19 @@ declare global {
                                 }
                             }
                             sys_domain: 'global'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: 'c7d07e8e2f584bffaf14e663c75740d5'
+                        key: {
+                            sys_security_acl: '2656ee07fd2642e2960d579e6d4b3aa4'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
                         }
                     },
                     {
@@ -7572,6 +8191,19 @@ declare global {
                         id: 'd25f88eea86041aebadfcb7764599e25'
                         key: {
                             sys_ui_action: '7dfb12acaed149789190c6355da3aba8'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: 'd260571d14484508ae9eb0f2d4e882ea'
+                        key: {
+                            sys_security_acl: 'db219113da5b4ed08491e11f2a120bed'
                             sys_user_role: {
                                 id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
                                 key: {
@@ -8109,6 +8741,19 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_security_acl_role'
+                        id: 'df3ea4d2c1b14e959350eaed650e2708'
+                        key: {
+                            sys_security_acl: '40a9b406dd9a41a58ff137cdc58c9318'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: 'e01270af89264d979b246bdbfeb6435a'
                         key: {
@@ -8152,6 +8797,19 @@ declare global {
                             }
                             element: 'service_id'
                             position: '4'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: 'e1f7fa92cfdb4081a1a05ca902afe4b3'
+                        key: {
+                            sys_security_acl: '392ba868a6c24eeb8d5b4de142b7d149'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
                         }
                     },
                     {
@@ -8458,6 +9116,19 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_security_acl_role'
+                        id: 'ed2aae0be6b847c68e0fc54b1b0f7e4e'
+                        key: {
+                            sys_security_acl: 'b300f715d724471b962a05ff9b6aadba'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: 'ed8ca325af4c49be8334807b4a4924dc'
                         key: {
@@ -8468,7 +9139,7 @@ declare global {
                     {
                         table: 'sys_documentation'
                         id: 'edbd9489fd8a4414983bdf5d886ee696'
-                        deleted: true
+                        deleted: false
                         key: {
                             name: 'x_msag_gtfs_schedu_imp_stimes'
                             element: 'u_shape_dist_traveled'
@@ -8551,6 +9222,19 @@ declare global {
                             }
                             element: 'agency_lang'
                             position: '7'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: 'f032624dd0be4285bec99f80efe87d81'
+                        key: {
+                            sys_security_acl: 'ebf1ac952ca1434c855f36c7c8903432'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
                         }
                     },
                     {
@@ -8688,6 +9372,19 @@ declare global {
                             name: 'x_msag_gtfs_schedu_trip'
                             element: 'trip_short_name'
                             language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: 'f612c0a5db36442dad56b2490ed16762'
+                        key: {
+                            sys_security_acl: 'b0ebca5f9a5b4ef49b15b58eed7e0c68'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
                         }
                     },
                     {
@@ -8949,6 +9646,19 @@ declare global {
                         key: {
                             name: 'x_msag_gtfs_schedu_imp_stops'
                             element: 'u_stop_lat'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: 'fe14ed110a24458a8a3b63ac1238af32'
+                        key: {
+                            sys_security_acl: '0369f8bd385c49e4abc6bc3c1fc8bcd6'
+                            sys_user_role: {
+                                id: 'f2f84fe269ea41b7aa3bd3199444a1fb'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu.admin'
+                                }
+                            }
                         }
                     },
                     {

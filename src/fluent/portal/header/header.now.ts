@@ -10,6 +10,7 @@ export const gtfsHeader = SPHeaderFooter({
     $id: Now.ID['x_msag_gtfs_schedu_header'],
     name: 'GTFS Portal Header',
     id: 'x_msag_gtfs_schedu_header',
+    public: true,
     static: false,
     htmlTemplate: Now.include('./template.html'),
     category: 'custom',
