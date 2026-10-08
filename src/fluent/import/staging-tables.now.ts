@@ -9,8 +9,11 @@ import { Table, StringColumn } from '@servicenow/sdk/core'
  * does. Table names use short `imp_*` suffixes to stay within the 30-character limit
  * under the `x_msag_gtfs_schedu_` prefix (e.g. stop_times → imp_stimes).
  *
- * Only MVP-relevant columns are declared. Unknown extra columns in the feed are
- * ignored by the import (Section 3, guiding principle 5), so they need no column here.
+ * Only MVP-relevant columns are declared. Extra columns present in a feed (e.g.
+ * block_id, shape_id, shape_dist_traveled) are intentionally NOT declared — the import
+ * ignores them. NOTE: source CSVs MUST be UTF-8 WITHOUT a byte-order mark (BOM); a BOM
+ * mangles the first column's header (e.g. `trip_id` → `\ufefftrip_id`) so it never maps
+ * to its `u_` column.
  */
 
 // agency.txt → gtfs_agency

@@ -5,6 +5,62 @@ declare global {
         namespace Internal {
             interface Keys extends KeysRegistry {
                 explicit: {
+                    '06b4c8e5c3b7c75092fb1613e4013156': {
+                        table: 'sys_scope_privilege'
+                        id: '06b4c8e5c3b7c75092fb1613e4013156'
+                    }
+                    '138c8025c33bc75092fb1613e40131a8': {
+                        table: 'sys_scope_privilege'
+                        id: '138c8025c33bc75092fb1613e40131a8'
+                    }
+                    '312a8ce9c3f7c75092fb1613e401318d': {
+                        table: 'sys_app_module'
+                        id: '312a8ce9c3f7c75092fb1613e401318d'
+                    }
+                    '538c8025c33bc75092fb1613e40131b3': {
+                        table: 'sys_scope_privilege'
+                        id: '538c8025c33bc75092fb1613e40131b3'
+                    }
+                    '56f648edc3b7c75092fb1613e40131aa': {
+                        table: 'sys_app_module'
+                        id: '56f648edc3b7c75092fb1613e40131aa'
+                    }
+                    '790888e1c3f7c75092fb1613e40131fa': {
+                        table: 'sys_app_module'
+                        id: '790888e1c3f7c75092fb1613e40131fa'
+                    }
+                    '801c4021c33bc75092fb1613e40131cf': {
+                        table: 'sys_scope_privilege'
+                        id: '801c4021c33bc75092fb1613e40131cf'
+                    }
+                    '841c84a1c33bc75092fb1613e40131eb': {
+                        table: 'sys_scope_privilege'
+                        id: '841c84a1c33bc75092fb1613e40131eb'
+                    }
+                    '8b18cce1c3f7c75092fb1613e40131f9': {
+                        table: 'sys_app_module'
+                        id: '8b18cce1c3f7c75092fb1613e40131f9'
+                    }
+                    '8eb4c8e5c3b7c75092fb1613e401315f': {
+                        table: 'sys_scope_privilege'
+                        id: '8eb4c8e5c3b7c75092fb1613e401315f'
+                    }
+                    '938c8025c33bc75092fb1613e40131cd': {
+                        table: 'sys_scope_privilege'
+                        id: '938c8025c33bc75092fb1613e40131cd'
+                    }
+                    a0588c25c3f7c75092fb1613e401313c: {
+                        table: 'sys_app_module'
+                        id: 'a0588c25c3f7c75092fb1613e401313c'
+                    }
+                    a89800a5c3f7c75092fb1613e40131e2: {
+                        table: 'sys_app_module'
+                        id: 'a89800a5c3f7c75092fb1613e40131e2'
+                    }
+                    aa8c0461c33bc75092fb1613e401318b: {
+                        table: 'sys_properties'
+                        id: 'aa8c0461c33bc75092fb1613e401318b'
+                    }
                     bom_json: {
                         table: 'sys_module'
                         id: '6e816b6780e949d2bde1af97c9dbf460'
@@ -12,6 +68,10 @@ declare global {
                     br_feed_single_active: {
                         table: 'sys_script'
                         id: '85e97c02dcf7400da4b870d87ab142c1'
+                    }
+                    cd388425c3f7c75092fb1613e40131e1: {
+                        table: 'sys_app_module'
+                        id: 'cd388425c3f7c75092fb1613e40131e1'
                     }
                     ds_agency: {
                         table: 'sys_data_source'
@@ -44,6 +104,10 @@ declare global {
                     ds_trips: {
                         table: 'sys_data_source'
                         id: '77203eec5e1b42b2b5f878f4540039f8'
+                    }
+                    e4ba082dc3f7c75092fb1613e4013167: {
+                        table: 'sys_scope_privilege'
+                        id: 'e4ba082dc3f7c75092fb1613e4013167'
                     }
                     evt_feed_op: {
                         table: 'sysevent_register'
@@ -1282,6 +1346,23 @@ declare global {
                     },
                     {
                         table: 'sys_ui_element'
+                        id: '13670861c3f7c75092fb1613e40131ee'
+                        key: {
+                            sys_ui_section: {
+                                id: 'd3674461c3f7c75092fb1613e4013156'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu_imp_agency'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'u_agency_phone'
+                            position: '1'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
                         id: '138471c785d74d629d1a271270b53459'
                         key: {
                             sys_ui_section: {
@@ -1650,6 +1731,23 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_element'
+                        id: '1b670861c3f7c75092fb1613e40131f3'
+                        key: {
+                            sys_ui_section: {
+                                id: 'd3674461c3f7c75092fb1613e4013156'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu_imp_agency'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'u_agency_email'
+                            position: '9'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '1bc4c78b90a640a6be30c75b2671cdee'
                         key: {
@@ -1692,6 +1790,15 @@ declare global {
                     },
                     {
                         table: 'sys_dictionary'
+                        id: '1da797d4683e4249b1dbd3103d3ec346'
+                        deleted: true
+                        key: {
+                            name: 'x_msag_gtfs_schedu_imp_trips'
+                            element: 'u_shape_id'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
                         id: '1e67a31d10794016be81766f492e3588'
                         key: {
                             name: 'x_msag_gtfs_schedu_stop'
@@ -1713,6 +1820,23 @@ declare global {
                             name: 'x_msag_gtfs_schedu_imp_agency'
                             element: 'u_agency_url'
                             language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: '1f670861c3f7c75092fb1613e40131f0'
+                        key: {
+                            sys_ui_section: {
+                                id: 'd3674461c3f7c75092fb1613e4013156'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu_imp_agency'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'u_agency_id'
+                            position: '5'
                         }
                     },
                     {
@@ -1794,6 +1918,15 @@ declare global {
                         key: {
                             name: 'x_msag_gtfs_schedu_trip'
                             element: 'last_arrival_sec'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '22b5788597c64bf5aaed1bccd4d067e6'
+                        deleted: true
+                        key: {
+                            name: 'x_msag_gtfs_schedu_imp_stimes'
+                            element: 'u_shape_dist_traveled'
                         }
                     },
                     {
@@ -2305,6 +2438,16 @@ declare global {
                             }
                             element: 'feed'
                             position: '0'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '311bf373bfb54fef8e9c026a388e217c'
+                        deleted: true
+                        key: {
+                            name: 'x_msag_gtfs_schedu_imp_trips'
+                            element: 'u_block_id'
+                            language: 'en'
                         }
                     },
                     {
@@ -3202,6 +3345,23 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_element'
+                        id: '53670861c3f7c75092fb1613e40131f0'
+                        key: {
+                            sys_ui_section: {
+                                id: 'd3674461c3f7c75092fb1613e4013156'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu_imp_agency'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: '.end_split'
+                            position: '4'
+                        }
+                    },
+                    {
                         table: 'sys_transform_entry'
                         id: '536dd2797784427e83a700144bb796e2'
                         key: {
@@ -3350,6 +3510,16 @@ declare global {
                         key: {
                             name: 'x_msag_gtfs_schedu_stop'
                             element: 'stop_name_search'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '55c7ab6fbf9b4873a64e20758f5d00e1'
+                        deleted: true
+                        key: {
+                            name: 'x_msag_gtfs_schedu_imp_stimes'
+                            element: 'u_drop_off_time'
+                            language: 'en'
                         }
                     },
                     {
@@ -3645,6 +3815,23 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_element'
+                        id: '5f670861c3f7c75092fb1613e40131f2'
+                        key: {
+                            sys_ui_section: {
+                                id: 'd3674461c3f7c75092fb1613e4013156'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu_imp_agency'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'u_agency_url'
+                            position: '8'
+                        }
+                    },
+                    {
                         table: 'sys_choice'
                         id: '5fe82d40f2984e2c80ef3ded1ed59370'
                         key: {
@@ -3904,6 +4091,15 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_dictionary'
+                        id: '661c5c6d75f34aebbcd30c4d67ba7c93'
+                        deleted: true
+                        key: {
+                            name: 'x_msag_gtfs_schedu_imp_trips'
+                            element: 'u_block_id'
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: '662116f0aa0449bf8bfa4b89d4ef3c9b'
                         key: {
@@ -4063,6 +4259,15 @@ declare global {
                         key: {
                             map: 'b03ee2299f61432aa4946a38e5ff9051'
                             target_field: 'agency_lang'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '6c56596c29174cc6b672f94406200c68'
+                        deleted: true
+                        key: {
+                            name: 'x_msag_gtfs_schedu_imp_stimes'
+                            element: 'u_rplcd_n_ascii_1258203391'
                         }
                     },
                     {
@@ -5400,6 +5605,16 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_documentation'
+                        id: '9210e3ab733e41339e02ad87dbab5146'
+                        deleted: true
+                        key: {
+                            name: 'x_msag_gtfs_schedu_imp_trips'
+                            element: 'u_shape_id'
+                            language: 'en'
+                        }
+                    },
+                    {
                         table: 'sys_ui_element'
                         id: '9225c96ab1e84fb8a3fba131fde8c389'
                         key: {
@@ -5452,6 +5667,23 @@ declare global {
                         key: {
                             name: 'x_msag_gtfs_schedu_imp_trips'
                             element: 'u_service_id'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: '93670861c3f7c75092fb1613e40131f2'
+                        key: {
+                            sys_ui_section: {
+                                id: 'd3674461c3f7c75092fb1613e4013156'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu_imp_agency'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'u_agency_fare_url'
+                            position: '7'
                         }
                     },
                     {
@@ -5625,6 +5857,23 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_element'
+                        id: '97670861c3f7c75092fb1613e40131ef'
+                        key: {
+                            sys_ui_section: {
+                                id: 'd3674461c3f7c75092fb1613e4013156'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu_imp_agency'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'u_agency_lang'
+                            position: '3'
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: '980ce7dc8d214d9e97180db2950b45a7'
                         key: {
@@ -5639,6 +5888,15 @@ declare global {
                         key: {
                             map: '7ef6da532bcd464baab8601c7f605324'
                             target_field: 'route_id'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '9885ba0d3aaa4761a7fa4cd646048b18'
+                        deleted: true
+                        key: {
+                            name: 'x_msag_gtfs_schedu_imp_stimes'
+                            element: 'u_drop_off_time'
                         }
                     },
                     {
@@ -7364,6 +7622,38 @@ declare global {
                     },
                     {
                         table: 'sys_ui_element'
+                        id: 'd3670861c3f7c75092fb1613e40131f4'
+                        key: {
+                            sys_ui_section: {
+                                id: 'd3674461c3f7c75092fb1613e4013156'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu_imp_agency'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'u_agency_timezone'
+                            position: '10'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_section'
+                        id: 'd3674461c3f7c75092fb1613e4013156'
+                        key: {
+                            name: 'x_msag_gtfs_schedu_imp_agency'
+                            caption: 'NULL'
+                            view: {
+                                id: 'Default view'
+                                key: {
+                                    name: 'NULL'
+                                }
+                            }
+                            sys_domain: 'global'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
                         id: 'd3f2ad9eaed04b48a303a9a904e31971'
                         key: {
                             sys_ui_section: {
@@ -7504,6 +7794,40 @@ declare global {
                             value: '2'
                             language: 'en'
                             dependent_value: 'NULL'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'd7670861c3f7c75092fb1613e40131ec'
+                        key: {
+                            sys_ui_section: {
+                                id: 'd3674461c3f7c75092fb1613e4013156'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu_imp_agency'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: '.begin_split'
+                            position: '0'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'd7670861c3f7c75092fb1613e40131f1'
+                        key: {
+                            sys_ui_section: {
+                                id: 'd3674461c3f7c75092fb1613e4013156'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu_imp_agency'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'u_agency_name'
+                            position: '6'
                         }
                     },
                     {
@@ -7655,6 +7979,23 @@ declare global {
                             name: 'x_msag_gtfs_schedu_imp_trips'
                             element: 'u_wheelchair_accessible'
                             language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'db670861c3f7c75092fb1613e40131ee'
+                        key: {
+                            sys_ui_section: {
+                                id: 'd3674461c3f7c75092fb1613e4013156'
+                                key: {
+                                    name: 'x_msag_gtfs_schedu_imp_agency'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: '.split'
+                            position: '2'
                         }
                     },
                     {
@@ -8125,6 +8466,16 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_documentation'
+                        id: 'edbd9489fd8a4414983bdf5d886ee696'
+                        deleted: true
+                        key: {
+                            name: 'x_msag_gtfs_schedu_imp_stimes'
+                            element: 'u_shape_dist_traveled'
+                            language: 'en'
+                        }
+                    },
+                    {
                         table: 'sys_ui_element'
                         id: 'ee2cd6d40a0a4b9496b6bc9153544c98'
                         key: {
@@ -8404,6 +8755,16 @@ declare global {
                             }
                             element: 'cnt_routes'
                             position: '17'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'f6db2af04ba8440dade004bfccf8e5bd'
+                        deleted: true
+                        key: {
+                            name: 'x_msag_gtfs_schedu_imp_stimes'
+                            element: 'u_rplcd_n_ascii_1258203391'
+                            language: 'en'
                         }
                     },
                     {
