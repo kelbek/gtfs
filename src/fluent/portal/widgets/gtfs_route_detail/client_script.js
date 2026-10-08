@@ -6,6 +6,6 @@ api.controller = function () {
     c.reload = function () {
         c.data.date = c.date;
         c.data.direction = c.direction;
-        c.server.get({ date: c.date, direction: c.direction });
+        c.server.update();
     };
 };

@@ -16,11 +16,8 @@ api.controller = function ($scope) {
                     c.data.lat = pos.coords.latitude;
                     c.data.lon = pos.coords.longitude;
                     c.data.radius = 1000;
-                    c.server.get({
-                        lat: pos.coords.latitude,
-                        lon: pos.coords.longitude,
-                        radius: 1000
-                    });
+                    // c.server.update() sends c.data (incl. lat/lon/radius) as input.
+                    c.server.update();
                 });
             },
             function (err) {

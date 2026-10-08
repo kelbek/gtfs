@@ -12,6 +12,6 @@ api.controller = function () {
         c.data.date = c.date;
         c.data.time = c.time;
         c.data.timeSec = timeSec;
-        c.server.get({ date: c.date, time: c.time, timeSec: timeSec });
+        c.server.update();
     };
 };
